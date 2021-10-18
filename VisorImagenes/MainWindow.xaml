@@ -6,7 +6,18 @@
         xmlns:local="clr-namespace:VisorImagenes"
         mc:Ignorable="d"
         Title="Visor de imagenes" Height="600" Width="700" MinWidth="700" MinHeight="600" Icon="starwars.ico">
-    <DockPanel LastChildFill="False">
+    <DockPanel>
+        <DockPanel.Resources>
+            <Style TargetType="Button">
+                <Setter Property="Margin" Value="5"/>
+                <Setter Property="Width" Value="100"/>
+            </Style>
+            <Style TargetType="Image">
+                <Setter Property="Margin" Value="5"/>
+                <Setter Property="Width" Value="120"/>
+                <Setter Property="Stretch" Value="Fill"/>
+            </Style>
+        </DockPanel.Resources>
 
         <DockPanel Background="LightBlue" DockPanel.Dock="Bottom" Margin="10">
             <TextBlock Text="Nº de imágenes:10" HorizontalAlignment="Left" FontSize="20" Margin="5,20,0,20" ></TextBlock>
@@ -16,27 +27,27 @@
                 DockPanel.Dock="Right"  Margin="10" Background="LightGreen">
             <DockPanel >
                 <StackPanel DockPanel.Dock="top" VerticalAlignment="top">
-                    <Button Content="Añadir imagen" Width="100" Margin="5"></Button>
-                    <Button Content="Eliminar imagen" Width="100" Margin="5"></Button>
-                    <Button Content="Eliminar todas" Width="100" Margin="5"></Button>
+                    <Button Content="Añadir imagen"></Button>
+                    <Button Content="Eliminar imagen"></Button>
+                    <Button Content="Eliminar todas"></Button>
                 </StackPanel>
                 <StackPanel DockPanel.Dock="Bottom" VerticalAlignment="Bottom">
-                    <Button Content="Rotar" Width="100" Margin="5"></Button>
-                    <Button Content="Eliminar todas" Width="100" Margin="5"></Button>
+                    <Button Content="Rotar"></Button>
+                    <Button Content="Eliminar todas"></Button>
                 </StackPanel>
             </DockPanel>
         </Border>
         <StackPanel>
             <TextBlock Text="Visor de imágenes" FontSize="40" HorizontalAlignment="Center" ></TextBlock>
             <WrapPanel Margin="5">
-                <Image Source="foto.jpg" Width="120" Margin="5"></Image>
-                <Image Source="invierno.jpg" Width="120" Stretch="Fill" Margin="5"></Image>
-                <Image Source="otoño.jpg" Width="120" Stretch="Fill" Margin="5"></Image>
-                <Image Source="episodioIV.jpg" Width="120" Margin="5"></Image>
-                <Image Source="primavera.jpg" Width="120" Stretch="Fill" Margin="5"></Image>
-                <Image Source="episodioIV.jpg" Width="120" Margin="5"></Image>
-                <Image Source="verano.jpg" Width="120" Stretch="Fill" Margin="5"></Image>
-                <Image Source="episodioIV.jpg" Width="120" Margin="5"></Image>
+                <Image Source="foto.jpg" ></Image>
+                <Image Source="invierno.jpg" ></Image>
+                <Image Source="otoño.jpg" ></Image>
+                <Image Source="episodioIV.jpg" ></Image>
+                <Image Source="primavera.jpg" ></Image>
+                <Image Source="episodioIV.jpg" ></Image>
+                <Image Source="verano.jpg" ></Image>
+                <Image Source="episodioIV.jpg" ></Image>
             </WrapPanel>
         </StackPanel>
     </DockPanel>
